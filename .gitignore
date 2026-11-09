@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.pytest_cache/
+build/
+dist/
+# histórico das rotinas (pode ter texto de resposta do modelo)
+.runner-state/
+# settings gerado pelo policy-guard tem caminho absoluto da máquina
+**/.claude/settings.json
+**/.claude/settings.json.bak-*
+**/.claude/settings.local.json
+.policy-guard/
+.env
