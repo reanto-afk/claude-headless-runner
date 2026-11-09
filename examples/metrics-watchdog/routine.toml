@@ -1,0 +1,17 @@
+# Conferência diária de métricas: o LLM orquestra e resume, o Python decide.
+name = "metrics-watchdog"
+prompt_file = "prompt.md"
+model = "haiku"
+allowed_tools = ["Bash(python check_metrics.py:*)", "Read"]
+extra_args = ["--setting-sources", "project"]   # isola da configuração pessoal do usuário
+timeout_seconds = 180
+max_attempts = 3
+backoff_seconds = [10, 60]
+daily_at = "07:30"
+expect_every_hours = 24      # o vigia avisa se passar 24h sem sucesso...
+business_hours = "8-18"      # ...mas só em horário comercial
+
+[alert]
+webhook_env = "CLAUDE_RUNNER_WEBHOOK"   # a URL fica na variável de ambiente, nunca no arquivo
+format = "slack"                        # slack | discord | ntfy
+notify_on_success = true                # o resumo do dia também é enviado

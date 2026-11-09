@@ -1,0 +1,15 @@
+{
+  "2026-11-05": {
+    "new_signups": 132,
+    "active_users": 1870,
+    "support_tickets": 37,
+    "churned_accounts": 4
+  },
+  "2026-11-06": {
+    "new_signups": 141,
+    "active_users": 1960,
+    "support_tickets": 44,
+    "churned_accounts": 6,
+    "nps_comment_sha256": "fbf8f0260a106443c06483b9d79599725f41414a62e48731f96b94c5ba6800b9"
+  }
+}

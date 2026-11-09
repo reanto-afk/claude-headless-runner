@@ -1,0 +1,14 @@
+# Rascunho do status semanal: a rotina escreve, um humano aprova antes de publicar.
+name = "weekly-status"
+prompt_file = "prompt.md"
+model = "haiku"
+allowed_tools = ["Read"]
+extra_args = ["--setting-sources", "project"]
+timeout_seconds = 240
+max_attempts = 2
+weekly_at = "FRI 16:00"
+expect_every_hours = 170     # uma semana + folga
+
+[alert]
+format = "discord"
+notify_on_success = true     # o rascunho vai para o canal de aprovação

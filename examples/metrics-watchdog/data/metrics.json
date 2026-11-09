@@ -1,0 +1,9 @@
+{
+  "metrics": {
+    "new_signups":      {"owner": "pipeline", "tolerance_pct": 0, "values": {"2026-11-05": 132, "2026-11-06": 141}},
+    "active_users":     {"owner": "pipeline", "tolerance_pct": 1, "values": {"2026-11-05": 1870, "2026-11-06": 1915}},
+    "support_tickets":  {"owner": "routine",  "tolerance_pct": 0, "values": {"2026-11-05": 37, "2026-11-06": null}},
+    "churned_accounts": {"owner": "pipeline", "tolerance_pct": 0, "values": {"2026-11-05": 4}},
+    "nps_comment":      {"owner": "pipeline", "type": "text", "values": {"2026-11-06": "Atendimento rápido, mas o app trava no login."}}
+  }
+}

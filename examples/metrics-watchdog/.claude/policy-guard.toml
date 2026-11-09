@@ -1,0 +1,21 @@
+# Opcional: com o claude-code-policy-guard instalado como hook, a rotina só consegue
+# ler arquivos e rodar o script de conferência; todo o resto é bloqueado e auditado.
+version = 1
+default = "deny"
+mode = "headless"
+
+[[rule]]
+name = "leitura"
+tools = ["Read", "Glob", "Grep"]
+decision = "allow"
+
+[[rule]]
+name = "ferramentas internas do Claude Code"
+tools = ["TodoWrite", "ToolSearch"]
+decision = "allow"
+
+[[rule]]
+name = "só o script de conferência"
+tools = ["Bash"]
+commands = ["python check_metrics.py"]
+decision = "allow"
